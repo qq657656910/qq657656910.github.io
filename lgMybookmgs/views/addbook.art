@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        
+        <h1>添加图书</h1>
+        <form action="/addbook" method="POST" enctype="multipart/form-data">
+            书名：<input type="text" name="bookname"><br>
+            作者：<input type="text" name="name"><br>
+            图片: <input type="file" name="imgurl"><br>    
+            类别：<input type="text" name="fenclass"><br><br>
+            描述：<input type="text" name="desc" value="{{desc}}" >   <br><br>
+            简介：<textarea name="jjbook"  cols="21" rows="10">{{jjbook}}</textarea>
+            <input type="submit" value="提交">
+        </form>
+    </div>
+    
+</body>
+</html>

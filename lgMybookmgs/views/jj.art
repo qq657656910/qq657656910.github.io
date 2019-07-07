@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>图书简介</h1>
+    <form action="/jj" method="POST" >
+        <input type="hidden" name="id" value="{{id}}"><br>
+             书名：<input type="text" name="bookname" value="{{list[0].bookname}}"><br>
+            作者：<input type="text" name="name" value="{{list[0].name}}"><br>
+            类别：<input type="text" name="fenclass" value="{{list[0].fenclass}}"><br><br>
+            描述：<input type="text" name="desc" value="{{list[0].desc}}" >   <br><br>
+            简介：<textarea name="jjbook"  cols="21" rows="10">{{list[0].jjbook}}</textarea>            
+            <!-- <input type="submit" value="提交"> -->
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .tital{
+            width: 100%;  
+            height: 50px;
+            background-color:lightslategrey;
+            text-align: center;
+            font-size: 25px;
+            line-height: 50px;
+                 
+        }
+        .content{
+            width: 100%;
+            background-color:silver;
+            /* border: 1px solid saddlebrown; */
+            
+        }
+        .content table{
+            width: 100%;
+        }
+        .content tr{
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+
+        }
+        .content tr td{
+            border: 2px solid saddlebrown;
+
+        }
+    
+    </style>
+</head>
+<body>
+
+ 
+    <div class="tital">图书管理系统<a href="/toaddbook">添加图书</a></div>
+    <% if(login){ %>
+        <h1>欢迎 {{username}}</h1><h2><a href="/cut">退出</a></h2><h3><a href="/huishou">回收站</a></h3>
+    <div class="content">
+        <table cellpadding="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <td>编号</td>
+                    <td>书名</td>                   
+                    <td>图片</td>
+                    <td>作者</td>
+                    <td>分类</td>
+                    <td>描述</td>
+                    <td>操作</td>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {{each list}}
+                <tr>
+                    <td>{{$value.id}}</td>
+                    <td><a href="/tojj?id={{$value.id}}">{{$value.bookname}}</a></td>
+                    <td><img src="{{$value.imgurl}}" alt="" width="100px" height="100px"></td>
+                    <td>{{$value.name}}</td>
+                    <td>{{$value.fenclass}}</td>
+                    <td>{{$value.desc}}</td>
+                    <td><a href="/toeidtbook?id={{$value.id}}">修改</a>|<a href="/hui?id={{$value.id}}">删除</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+    </div>
+    <% }else{ %>
+        <a href="/login">登入</a>
+    <% } %>
+</body>
+</html>
