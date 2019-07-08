@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>常晴毕业设计</title>
+   <link rel="stylesheet" href="../css/gg.css">
+	<link rel="stylesheet" href="../css/text4.css">
+</head>
+
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script>
+
+	$(function(){
+
+		$('.top_d input').focus(function(){
+         
+         console.log($('.top_d input').val());
+         if($('.top_d input').val()=="请输入关键字"){
+            $(this).val(" ");
+         }  
+      })
+      $(".top_d input").blur(function(){
+      if($(this).val()==" "){
+         $(this).val("请输入关键字");
+      }
+      })
+
+
+		//搜索部分结束
+		$(".daoh_li").hover(function(){
+			$(this).children(".daoh_li_ul").stop().slideDown(500);
+		},function(){
+			$(this).children(".daoh_li_ul").stop().slideUp(300);
+
+		})
+// 导航栏结束
+$(".banner_o li").mouseenter(function(){
+			$(this).addClass("show").siblings().removeClass("show");
+			var index=$(this).index();
+			num=index;
+			$(".banner_ul li ").eq(index).css("display","block").siblings().css("display","none")
+		})
+		var num=0;
+		var timer=null;
+
+		function run(){
+			if(num>5){
+				num=0;
+			}else{
+				num++;
+			}
+
+		$(".banner_o li").eq(num).addClass("show").siblings().removeClass("show");
+		$(".banner_ul li ").eq(num).css("display","block").siblings().css("display","none")
+
+		}
+		function run1(){
+			if(num<0){
+				num=5;
+			}else{
+				num--;
+			}
+
+		$(".banner_o li").eq(num).addClass("show").siblings().removeClass("show");
+		$(".banner_ul li ").eq(num).css("display","block").siblings().css("display","none")
+
+		}
+		timer=setInterval(run,800);
+		$("#banner").mouseenter(function(){
+			clearInterval(timer);
+		}).mouseleave(function(){
+			clearInterval(timer);
+		timer=setInterval(run,800);
+
+
+		})
+		$(".banner_right").click(function(){
+		  run();
+
+
+		})
+		$(".banner_left").click(function(){
+			run1();
+
+
+		})
+
+
+
+		// banner结束
+    var num1=0;
+      var timer1=null;
+      function run1(){
+         num1--;
+         if(num1<-1856){
+            num1=0
+         }
+         $(".box4_ul").css("left",num1);
+
+      }
+      timer1=setInterval(run1,10);
+      $("#box4").mouseenter(function(){
+         clearInterval(timer1);
+      }).mouseleave(function(){
+         clearInterval(timer1);
+      timer1=setInterval(run1,10);
+
+
+
+      })
+     
+
+
+		})
+	</script>
+		
+
+<body>
+	<div id="top">
+		<div class="top_d">
+		<input type="text" value="请输入关键字"><button>搜索</button>
+		</div>
+		<ul class="top_ul">
+            		<li><img src="../img/web01.png" alt=""><a href="	#">设为首页</a></li>
+            		<li><img src="../img/web02.png" alt=""><a href="	#">加入收藏</a></li>
+            		<li><img src="../img/web03.png" alt=""><a href="	#">联系我们</a></li>
+            		<li style="font-size: 40px ; font-weight: 800;">带你仰望世界</li>
+    		
+         </ul>
+
+	</div>
+
+	<div id="daoh">
+   	
+   	<ul class="daoh_ul">
+   		<li class="daoh_li"><a href="text1.html">首页</a></li>
+   		<li class="daoh_li"><a href="text2.html">电视剧</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">还珠格格</a></li>
+               <li><a href="#">西游记</a></li>
+               <li><a href="#">一起来看流星雨</a></li>
+               <li><a href="#">封神榜</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text3.html">小品</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">小品</a></li>
+   				<li><a href="#">小品</a></li>
+   				<li><a href="#">小品</a></li>
+   				<li><a href="#">小品</a></li>
+   			</ul>
+
+   		</li>
+   		<li class="daoh_li"><a href="text4.html">京剧</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">京剧</a></li>
+   				<li><a href="#">京剧</a></li>
+   				<li><a href="#">京剧</a></li>
+   				<li><a href="#">京剧</a></li>
+   			</ul>
+   		</li >
+   		<li class="daoh_li"><a href="text5.html">综艺</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">综艺</a></li>
+   				<li><a href="#">综艺</a></li>
+   				<li><a href="#">综艺</a></li>
+   				<li><a href="#">综艺</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text6.html">动画片</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">动画片</a></li>
+   				<li><a href="#">动画片</a></li>
+   				<li><a href="#">动画片</a></li>
+   				<li><a href="#">动画片</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text7.html">电影</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">电影</a></li>
+   				<li><a href="#">电影</a></li>
+   				<li><a href="#">电影</a></li>
+   				<li><a href="#">电影</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text8.html">其他</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">其他</a></li>
+   				<li><a href="#">其他</a></li>
+   				<li><a href="#">其他</a></li>
+   				<li><a href="#">其他</a></li>
+   			</ul>
+   		</li>
+   		
+   	</ul>
+   	
+
+   </div>
+   <!-- 导航栏结束 -->
+
+   <div id="banner">
+
+   	  <ul class="banner_ul">
+   	  	<li style="display: block">><img src="../img/banner4.jpg" alt="" </li>
+   	  	<li><img src="../img/banner2.jpg" alt=""></li>
+   	  	<li><img src="../img/banner3.jpg" alt=""></li>
+   	  	<li><img src="../img/banner1.jpg" alt=""></li>
+   	  	<li><img src="../img/banner5.jpg" alt=""></li>
+   	  	<li><img src="../img/banner6.jpg" alt=""></li>
+   	  </ul>
+   	  <ul class="banner_o">
+   	  	<li class="show">1</li>
+   	  	<li>2</li>
+   	  	<li>3</li>
+   	  	<li>4</li>
+   	  	<li>5</li>
+   	  	<li>6</li>
+   	  </ul>
+   	  <span class='banner_left'><</span>
+   	  <span class='banner_right'>></span>
+   </div>
+   <!-- banner结束 -->
+   <div id="zhuti">京剧<span class="ri">了解更多</span></div>
+   <!-- 公共部分结束 -->
+
+<div id="box2">
+      <h2>京剧--国粹的典型代表</h2>
+      <hr color="#945ad5">
+      <P class="p_l">京剧，曾称平剧，中国五大戏曲剧种[1]之一，场景布置注重写意，腔调以西皮、二黄为主，用胡琴和锣鼓等伴奏，被视为中国国粹，中国戏曲三鼎甲“榜首”。
+徽剧是京剧的前身。清代乾隆五十五年（1790年）起，原在南方演出的三庆、四喜、春台、和春， 四大徽班陆续进入北京，他们与来自湖北的汉调艺人合作，同时又接受了昆曲、秦腔的部分剧目、曲调和表演方法，吸收了一些地方民间曲调，通过不断的交流、融合，最终形成京剧。京剧形成后在清朝宫廷内开始快速发展，直至民国得到空前的繁荣。
+京剧走遍世界各地，分布地以北京为中心，遍及中国，成为介绍、传播中国传统艺术文化的重要媒介。在2010年11月16日，京剧被列入“人类非物质文化遗产代表作名录”。</P>
+<p class="p_r">
+<img src="../img/73.JPG" alt=""></p>
+
+
+</div>
+
+   <!-- ****** -->
+   <div class="l_l">
+
+      <p style="float: left;width: 800px;font-weight: 800;font-size: 25px;">京剧--发展</p>
+      <p style="float: left;width: 400px; font-weight: 800;font-size: 25px;">京剧--意义</p>
+
+   </div>
+   
+      <div id="box3">
+       <p class="p1_l">
+      
+      中国戏曲历经八百余年，传承悠久，是中国传统艺术的重要组成部分。从金元杂剧到明清传奇；从昆（曲）弋（阳腔）繁荣到四大徽班进京；从京剧诞生到成为“国粹”走进黄金时代，二百年的京剧史里产生了程长庚、谭鑫培、杨小楼、梅兰芳、马连良等一代又一代表演艺术大师。以富连成为代表的众多戏曲科班培养了数以千计的优秀演员，支撑着近百年京剧艺术殿堂。星罗棋布的戏楼剧场提供了京剧繁荣的舞台，精良独特的器乐、道具、戏装行业为京剧演出增色生辉。
+   </p>
+
+      <p class="p1_r">
+   
+      京剧的主体在中国文化整体中更偏于民间文化或曰底层文化，即使它因满清帝后及八旗王公 青睐有加而迅速繁荣，也不足以改变美学上的这一特质。当然，恰因基于民间趣味的京剧从清末直到整个20世纪获得了此前所有民间艺术从未有过的地位，它也从艺术本体的层面，最大限度地扩展了民间文化与美学的影响，提升了民间趣味在中国文化传统中的地位。
+    </p>
+
+
+   </div>
+   <!-- ******* -->
+   <div id="box4">
+      <ul class="box4_ul">
+         <li><img src="../img/31.JPG" alt=""></li>
+         <li><img src="../img/32.JPG" alt=""></li>
+         <li><img src="../img/33.JPG" alt=""></li>
+         <li><img src="../img/34.JPG" alt=""></li>
+         <li><img src="../img/35.JPG" alt=""></li>
+         <li><img src="../img/36.JPG" alt=""></li>
+         <li><img src="../img/37.JPG" alt=""></li>
+         <li><img src="../img/38.JPG" alt=""></li>
+         <li><img src="../img/31.JPG" alt=""></li>
+         <li><img src="../img/32.JPG" alt=""></li>
+         <li><img src="../img/33.JPG" alt=""></li>
+         <li><img src="../img/34.JPG" alt=""></li>
+         <li><img src="../img/35.JPG" alt=""></li>
+         <li><img src="../img/36.JPG" alt=""></li>
+
+
+      </ul>
+
+
+   </div>
+
+
+
+
+
+
+
+
+   <!-- 尾部 -->
+  <div id="bom">
+      湖南财经工业职业技术学院 网络许可证: 湘教QS3-200504-000027 湘ICP备05002485号 学院地址：湖南省衡阳市珠晖区狮山路20号
+      <br> 
+邮政编码：421002 招生热线：0734- 8378042 技术支持：图文信息中心
+<br>
+   湖南财经工业职业技术学院电子信息系17软件2班常晴 毕业设计
+
+
+   </div>
+	
+</body>
+</html>

@@ -1,0 +1,55 @@
+#box2{
+	width: 1200px;
+	height: 205px;
+	/*background: pink;*/
+	margin: 0 auto;
+}
+#box3{
+	width: 1198px;
+	height: 450px;
+	margin:0px auto;
+	border: 1px #945ad5 solid;
+
+}
+.box_l{
+	width: 700px;
+	height: 416px;
+	float: left;
+	/*background: pink;*/
+}
+.box_r{
+	width: 300px;
+	height: 350px;
+	margin: 30px ;
+
+	float: right;
+	background: red;
+}
+.box_l p{
+	height: 30px;
+	line-height: 30px;
+}
+.w_p{
+	height: 50px;
+	width: 1200px;
+	margin:0 auto;
+background: url("../img/comment.jpg") no-repeat left center;
+
+background-color:#945ad5; }
+.box4_1,.box4_2,.box4_3{
+
+	width: 1100px;
+	height: 100px;
+	margin:0 auto;
+	padding-left: 100px;
+	border-top:1px #ccc solid;
+}
+.box4_1{
+	background: url(../img/pic01.jpg) no-repeat left center;
+}
+.box4_2{
+	background: url(../img/pic02.jpg) no-repeat left center;
+}
+.box4_3{
+	background: url(../img/pic03.jpg) no-repeat left center;
+}

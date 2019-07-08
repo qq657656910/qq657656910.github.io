@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>常晴毕业设计</title>
+   <link rel="stylesheet" href="../css/gg.css">
+	<link rel="stylesheet" href="../css/text3.css">
+</head>
+
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script>
+
+	$(function(){
+
+		$('.top_d input').focus(function(){
+         
+         console.log($('.top_d input').val());
+         if($('.top_d input').val()=="请输入关键字"){
+            $(this).val(" ");
+         }  
+      })
+      $(".top_d input").blur(function(){
+      if($(this).val()==" "){
+         $(this).val("请输入关键字");
+      }
+      })
+
+
+		//搜索部分结束
+		$(".daoh_li").hover(function(){
+			$(this).children(".daoh_li_ul").stop().slideDown(500);
+		},function(){
+			$(this).children(".daoh_li_ul").stop().slideUp(300);
+
+		})
+// 导航栏结束
+$(".banner_o li").mouseenter(function(){
+			$(this).addClass("show").siblings().removeClass("show");
+			var index=$(this).index();
+			num=index;
+			$(".banner_ul li ").eq(index).css("display","block").siblings().css("display","none")
+		})
+		var num=0;
+		var timer=null;
+
+		function run(){
+			if(num>5){
+				num=0;
+			}else{
+				num++;
+			}
+
+		$(".banner_o li").eq(num).addClass("show").siblings().removeClass("show");
+		$(".banner_ul li ").eq(num).css("display","block").siblings().css("display","none")
+
+		}
+		function run1(){
+			if(num<0){
+				num=5;
+			}else{
+				num--;
+			}
+
+		$(".banner_o li").eq(num).addClass("show").siblings().removeClass("show");
+		$(".banner_ul li ").eq(num).css("display","block").siblings().css("display","none")
+
+		}
+		timer=setInterval(run,800);
+		$("#banner").mouseenter(function(){
+			clearInterval(timer);
+		}).mouseleave(function(){
+			clearInterval(timer);
+		timer=setInterval(run,800);
+
+
+		})
+		$(".banner_right").click(function(){
+		  run();
+
+
+		})
+		$(".banner_left").click(function(){
+			run1();
+
+
+		})
+
+
+
+		// banner结束
+     $(".box1_ul_li").hover(function(){
+      $(this).children("a").css("textDecoration","underline")
+      $(this).children("a").css("color","red")
+
+     },function(){
+     $(this).children("a").css("textDecoration","none")
+      $(this).children("a").css("color","#945ad5")
+
+
+     })
+
+		})
+	</script>
+		
+
+<body>
+	<div id="top">
+		<div class="top_d">
+		<input type="text" value="请输入关键字"><button>搜索</button>
+		</div>
+		<ul class="top_ul">
+            		<li><img src="../img/web01.png" alt=""><a href="	#">设为首页</a></li>
+            		<li><img src="../img/web02.png" alt=""><a href="	#">加入收藏</a></li>
+            		<li><img src="../img/web03.png" alt=""><a href="	#">联系我们</a></li>
+            		<li style="font-size: 40px ; font-weight: 800;">带你仰望世界</li>
+    		
+         </ul>
+
+	</div>
+
+	<div id="daoh">
+   	
+   	<ul class="daoh_ul">
+   		<li class="daoh_li"><a href="text1.html">首页</a></li>
+   		<li class="daoh_li"><a href="text2.html">电视剧</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">还珠格格</a></li>
+               <li><a href="#">西游记</a></li>
+               <li><a href="#">一起来看流星雨</a></li>
+               <li><a href="#">封神榜</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text3.html">小品</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">小品</a></li>
+   				<li><a href="#">小品</a></li>
+   				<li><a href="#">小品</a></li>
+   				<li><a href="#">小品</a></li>
+   			</ul>
+
+   		</li>
+   		<li class="daoh_li"><a href="text4.html">京剧</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">京剧</a></li>
+   				<li><a href="#">京剧</a></li>
+   				<li><a href="#">京剧</a></li>
+   				<li><a href="#">京剧</a></li>
+   			</ul>
+   		</li >
+   		<li class="daoh_li"><a href="text5.html">综艺</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">综艺</a></li>
+   				<li><a href="#">综艺</a></li>
+   				<li><a href="#">综艺</a></li>
+   				<li><a href="#">综艺</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text6.html">动画片</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">动画片</a></li>
+   				<li><a href="#">动画片</a></li>
+   				<li><a href="#">动画片</a></li>
+   				<li><a href="#">动画片</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text7.html">电影</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">电影</a></li>
+   				<li><a href="#">电影</a></li>
+   				<li><a href="#">电影</a></li>
+   				<li><a href="#">电影</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text8.html">其他</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">其他</a></li>
+   				<li><a href="#">其他</a></li>
+   				<li><a href="#">其他</a></li>
+   				<li><a href="#">其他</a></li>
+   			</ul>
+   		</li>
+   		
+   	</ul>
+   	
+
+   </div>
+   <!-- 导航栏结束 -->
+
+   <div id="banner">
+
+   	  <ul class="banner_ul">
+   	  	<li style="display: block">><img src="../img/banner4.jpg" alt="" </li>
+   	  	<li><img src="../img/banner2.jpg" alt=""></li>
+   	  	<li><img src="../img/banner3.jpg" alt=""></li>
+   	  	<li><img src="../img/banner1.jpg" alt=""></li>
+   	  	<li><img src="../img/banner5.jpg" alt=""></li>
+   	  	<li><img src="../img/banner6.jpg" alt=""></li>
+   	  </ul>
+   	  <ul class="banner_o">
+   	  	<li class="show">1</li>
+   	  	<li>2</li>
+   	  	<li>3</li>
+   	  	<li>4</li>
+   	  	<li>5</li>
+   	  	<li>6</li>
+   	  </ul>
+   	  <span class='banner_left'><</span>
+   	  <span class='banner_right'>></span>
+   </div>
+   <!-- banner结束 -->
+   <div id="zhuti">小品<span class="ri">了解更多</span></div>
+   <!-- 公共部分结束 -->
+   <div id="box1">
+      <ul class="box1_ul">
+         <li class="box1_ul_li"><img src="../img/xiaopin1.jpg" title="20180401王龙 娇娇 宋晓峰 程野小品搞笑大全《蹬三轮儿的父亲》"  alt="">
+         <a href="#">《蹬三轮儿的父亲》</a>
+
+         </li>
+         <li class="box1_ul_li"><img src="../img/xiaopin2.jpg" title="20180325欢乐喜剧人 王龙 丫蛋 宋晓峰 程野小品大全《华府招亲》" alt="">
+            <a href="#">《华府招亲》</a>
+         </li>
+         <li class="box1_ul_li"><img src="../img/xiaopin3.jpg" title="20180311欢乐喜剧人 王龙  丫蛋 宋晓峰 程野小品大全《顺水推舟》" alt="">
+            <a href="#">《顺水推舟》</a>  
+         </li>
+         <li class="box1_ul_li"><img src="../img/xiaopin4.jpg" title="20180304欢乐喜剧人 宋晓峰  丫蛋 程野小品搞笑大全《原来如此》" alt="">
+            <a href="#">《原来如此》</a>
+         </li>
+         <li class="box1_ul_li"><img src="../img/xiaopin5.jpg" title="20180225欢乐喜剧人 张小伟\小超越\丫蛋\程野小品大全《春天里》" alt="">
+            <a href="#">《春天里》</a>
+         </li>
+         <li class="box1_ul_li"><img src="../img/xiaopin6.jpg" title="20180216小品大全 赵家班 杨冰 程野小品全集《那一晚的春天》" alt="">
+            <a href="#">《那一晚的春天》</a>
+         </li>
+
+         <li class="box1_ul_li"><img src="../img/xiaopin7.jpg" title="20180214赵家班赵海燕\宋小宝\闫光明\程野小品大全《非诚勿扰》" alt="">
+            <a href="#">《非诚勿扰》</a>
+         </li>
+         <li class="box1_ul_li"><img src="../img/xiaopin8.jpg" title="宋小宝、赵本山小品全集高清《有钱了》 2013蛇年江苏春晚" alt="">
+            <a href="#">《有钱了》</a>
+         </li>
+         <li class="box1_ul_li"><img src="../img/xiaopin9.jpg" title="赵海燕、赵本山小品全集高清《中奖了》 2013年辽宁春晚" alt="">
+            <a href="#">《中奖了》</a>
+         </li>
+         <li class="box1_ul_li"><img src="../img/xiaopin10.jpg" title="赵本山小品全集高清《相亲2》 2012辽宁春晚" alt="">
+            <a href="#">《相亲2》</a>
+         </li>
+         <li class="box1_ul_li"><img src="../img/xiaopin11.jpg" title="2013辽宁春晚 柳岩护士装演小品《大腕来袭》" alt="">
+            <a href="#">《大腕来袭》</a>
+         </li>
+         <li class="box1_ul_li"><img src="../img/xiaopin12.jpg" title="赵本山、范伟小品搞笑大全《年前年后》" alt="">
+            <a href="#">《年前年后》</a>
+         </li>
+         
+         
+      </ul>
+
+   </div>
+
+
+   <div id="box2">
+      <div class="box2_d1">
+         <h2>小品推荐</h2>
+         <hr color="#945ad5">
+         <ul>
+            <li><a href="#">2019最新年会打黑除恶的小品剧本《我是黑社会》</a></li>
+            <li><a href="#">2019最新年会关于抖音的正能量小品《抖音》</a></li>
+            <li><a href="#">
+            2018最新正能量别做低头族小品剧本《抢红包》</a></li>
+            <li><a href="#">
+            2018年最新年会正能量小品剧本《朋友圈》</a></li>
+            <li><a href="#">2018年公司爆笑年会小品剧本《夸夸咱公司》</a></li>
+            <li><a href="#">
+            2018年最新年会爆笑年会小品剧本《新闻歪报》</a></li>
+            <li><a href="#">2018《土豪交友大会》</a></li>
+            <li><a href="#">2018年公司爆笑年会小品剧本《招聘》</a></li>
+            <li><a href="#">2018年最新年会正能量小品剧本《年终总结》</a></li>
+            <li><a href="#">2018《土豪我们做朋友吧》</a></li>
+            
+         </ul>
+
+
+      </div>
+
+      <div class="box2_d3">
+
+         <h2>双簧推荐</h2>
+         <hr color="#945ad5">
+         <ul>
+            <li><a href="#">双簧剧本《如此广告》</a></li>
+            <li><a href="#">双簧剧本《新生的一天》</a></li>
+            <li><a href="#">双簧剧本《贺新年》</a></li>
+            <li><a href="#">双簧剧本《说形象》</a></li>
+            <li><a href="#">双簧剧本《蛤蟆出场》</a></li>
+            <li><a href="#">双簧剧本《喜丧》</a></li>
+            <li><a href="#">双簧剧本《买书》</a></li>
+            <li><a href="#">双簧剧本《都是盗版惹得祸》</a></li>
+            
+
+            
+            
+         </ul>
+     
+
+
+      </div>
+
+      <div class="box2_d2">
+       
+         <h2>相声推荐</h2>
+         <hr color="#945ad5">
+         <ul>
+            <li><a href="#">搞笑相声剧本《狗年说狗》</a></li>
+            <li><a href="#">搞笑相声剧本《我爱我的班级》</a></li>
+            <li><a href="#">搞笑相声剧本《今天我毕业》</a></li>
+            <li><a href="#">搞笑相声剧本《好学生坏学生》</a></li>
+            <li><a href="#">搞笑相声剧本《班主任》</a></li>
+            <li><a href="#">搞笑相声剧本《没考好》</a></li>
+            <li><a href="#">搞笑相声剧本《十九大那些事》</a></li>
+            <li><a href="#">搞笑相声剧本《我是最聪明的人》</a></li>
+            <li><a href="#">搞笑相声剧本《狗年说狗》</a></li>
+            <li><a href="#">搞笑相声剧本《狗年说狗》</a></li>
+            
+
+         </ul>
+
+      </div>
+
+      
+
+
+
+
+   </div>
+
+   <!-- ****** -->
+
+
+
+
+
+
+
+
+
+
+
+   <!-- 尾部 -->
+  <div id="bom">
+      湖南财经工业职业技术学院 网络许可证: 湘教QS3-200504-000027 湘ICP备05002485号 学院地址：湖南省衡阳市珠晖区狮山路20号
+      <br> 
+邮政编码：421002 招生热线：0734- 8378042 技术支持：图文信息中心
+<br>
+   湖南财经工业职业技术学院电子信息系17软件2班常晴 毕业设计
+
+
+   </div>
+	
+</body>
+</html>

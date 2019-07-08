@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>常晴毕业设计</title>
+
+	<link rel="stylesheet" href="../css/gg.css">
+	<link rel="stylesheet" href="../css/text.css">
+	
+</head>
+
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script>
+
+	$(function(){
+
+		$('.top_d input').focus(function(){
+			
+			console.log($('.top_d input').val());
+			if($('.top_d input').val()=="请输入关键字"){
+				$(this).val(" ");
+			}	
+		})
+		$(".top_d input").blur(function(){
+		if($(this).val()==" "){
+			$(this).val("请输入关键字");
+		}
+		})
+
+
+		//搜索部分结束
+		$(".daoh_li").hover(function(){
+			$(this).children(".daoh_li_ul").stop().slideDown(500);
+		},function(){
+			$(this).children(".daoh_li_ul").stop().slideUp(300);
+
+		})
+// 导航栏结束
+$(".banner_o li").mouseenter(function(){
+			$(this).addClass("show").siblings().removeClass("show");
+			var index=$(this).index();
+			num=index;
+			$(".banner_ul li ").eq(index).css("display","block").siblings().css("display","none")
+		})
+		var num=0;
+		var timer=null;
+
+		function run(){
+			if(num>5){
+				num=0;
+			}else{
+				num++;
+			}
+
+		$(".banner_o li").eq(num).addClass("show").siblings().removeClass("show");
+		$(".banner_ul li ").eq(num).css("display","block").siblings().css("display","none")
+
+		}
+		function run1(){
+			if(num<0){
+				num=5;
+			}else{
+				num--;
+			}
+
+		$(".banner_o li").eq(num).addClass("show").siblings().removeClass("show");
+		$(".banner_ul li ").eq(num).css("display","block").siblings().css("display","none")
+
+		}
+		timer=setInterval(run,800);
+		$("#banner").mouseenter(function(){
+			clearInterval(timer);
+		}).mouseleave(function(){
+			clearInterval(timer);
+		timer=setInterval(run,800);
+
+
+		})
+		$(".banner_right").click(function(){
+		  run();
+
+
+		})
+		$(".banner_left").click(function(){
+			run1();
+
+
+		})
+
+
+		// banner结束
+		$(".zhuti_1_li").click(function(){
+			$(this).addClass("show2").siblings().removeClass("show2")
+			var index=$(this).index();
+			$(".zhuti_1_box1_d1").eq(index).css("display","block").siblings().css("display","none")
+		})
+		$(".zhuti_2_li").click(function(){
+			$(this).addClass("show2").siblings().removeClass("show2")
+			var index=$(this).index();
+			$(".zhuti_1_box1_d2").eq(index).css("display","block").siblings().css("display","none")
+		})
+
+		})
+		
+	</script>
+		
+
+<body>
+	<div id="top">
+		<div class="top_d">
+		<input type="text" value="请输入关键字"><button>搜索</button>
+		</div>
+		<ul class="top_ul">
+            		<li><img src="../img/web01.png" alt=""><a href="	#">设为首页</a></li>
+            		<li><img src="../img/web02.png" alt=""><a href="	#">加入收藏</a></li>
+            		<li><img src="../img/web03.png" alt=""><a href="	#">联系我们</a></li>
+            		<li style="font-size: 40px ; font-weight: 800;">带你仰望世界</li>
+    		
+         </ul>
+
+	</div>
+
+	<div id="daoh">
+   	
+   	<ul class="daoh_ul">
+   		<li class="daoh_li"><a href="text1.html">首页</a></li>
+   		<li class="daoh_li"><a href="text2.html">电视剧</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">还珠格格</a></li>
+               <li><a href="#">西游记</a></li>
+               <li><a href="#">一起来看流星雨</a></li>
+               <li><a href="#">封神榜</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text3.html">小品</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">小品</a></li>
+   				<li><a href="#">小品</a></li>
+   				<li><a href="#">小品</a></li>
+   				<li><a href="#">小品</a></li>
+   			</ul>
+
+   		</li>
+   		<li class="daoh_li"><a href="text4.html">京剧</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">京剧</a></li>
+   				<li><a href="#">京剧</a></li>
+   				<li><a href="#">京剧</a></li>
+   				<li><a href="#">京剧</a></li>
+   			</ul>
+   		</li >
+   		<li class="daoh_li"><a href="text5.html">综艺</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">综艺</a></li>
+   				<li><a href="#">综艺</a></li>
+   				<li><a href="#">综艺</a></li>
+   				<li><a href="#">综艺</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text6.html">动画片</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">动画片</a></li>
+   				<li><a href="#">动画片</a></li>
+   				<li><a href="#">动画片</a></li>
+   				<li><a href="#">动画片</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text7.html">电影</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">电影</a></li>
+   				<li><a href="#">电影</a></li>
+   				<li><a href="#">电影</a></li>
+   				<li><a href="#">电影</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text8.html">其他</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">其他</a></li>
+   				<li><a href="#">其他</a></li>
+   				<li><a href="#">其他</a></li>
+   				<li><a href="#">其他</a></li>
+   			</ul>
+   		</li>
+   		
+   	</ul>
+   	
+
+   </div>
+   <!-- 导航栏结束 -->
+
+   <div id="banner">
+
+   	  <ul class="banner_ul">
+   	  	<li style="display: block">><img src="../img/banner4.jpg" alt="" </li>
+   	  	<li><img src="../img/banner2.jpg" alt=""></li>
+   	  	<li><img src="../img/banner3.jpg" alt=""></li>
+   	  	<li><img src="../img/banner1.jpg" alt=""></li>
+   	  	<li><img src="../img/banner5.jpg" alt=""></li>
+   	  	<li><img src="../img/banner6.jpg" alt=""></li>
+   	  </ul>
+   	  <ul class="banner_o">
+   	  	<li class="show">1</li>
+   	  	<li>2</li>
+   	  	<li>3</li>
+   	  	<li>4</li>
+   	  	<li>5</li>
+   	  	<li>6</li>
+   	  </ul>
+   	  <span class='banner_left'><</span>
+   	  <span class='banner_right'>></span>
+   </div>
+   <!-- banner结束 -->
+   <div id="zhuti_1">
+   	   <ul class='zhuti_1_left'>
+   	   	<li class="zhuti_1_li">综艺   </li>
+   	   	<li class="zhuti_1_li">电视剧 </li>
+   	   	<li class="zhuti_1_li">电影   </li>
+   	   </ul>
+   	   <ul class='zhuti_1_right'>
+   	   	<li class="zhuti_1_li2">动漫   </li>
+   	   	<li class="zhuti_1_li2">体育   </li>
+   	   	<li class="zhuti_1_li2">   风味人间</li>
+   	   	<li class="zhuti_1_li2">   纪录片</li>
+   	   </ul>
+
+   </div>
+
+   <div id="zhuti_1_box1">
+
+   	<div class='zhuti_1_box1_d1' style="display: block;">
+
+   	<img src="../img/01.JPG" 
+   	class="zhuti_1_imgs" alt="">
+   
+  
+   	<ul class="zhuti_1_ul">
+   		<li>
+   			<img src="../img/02.JPG" alt="">
+   			<h5>亲爱的客栈.互相伤害</h5>
+   			<p>王珂刘涛玩亲亲</p>
+   		</li>
+   		<li><img src="../img/03.JPG" alt="">
+   			<h5>神奇伙伴在哪里</h5>
+   			<p>小猩猩公交车给孕妇让座</p>
+   		</li>
+   	</ul>
+
+
+   	<ul class="zhuti_1_ul">
+   		<li><img src="../img/04.JPG" alt="">
+   			<h5>恕我直言.更新</h5>
+   			<p>颖儿述说惨痛经历</p></li>
+   		<li><img src="../img/05.JPG" alt="">
+   			<h5>奇遇人生</h5>
+   			<p>朴树催泪唱《平凡之路》</p></li>
+   	</ul>
+  </div>
+
+   
+
+   <div class='zhuti_1_box1_d1' >
+
+   	<img src="../img/11.JPG" 
+   	class="zhuti_1_imgs" alt="">
+   
+  
+   	<ul class="zhuti_1_ul">
+   		<li>
+   			<img src="../img/12.JPG" alt="">
+   			<h5>盛唐幻夜[会员抢先看]</h5>
+   			<p>吴倩郑业成探案又谈爱情</p>
+   		</li>
+   		<li><img src="../img/13.JPG" alt="">
+   			<h5>创业时代</h5>
+   			<p>黄轩baby还原热血创业史</p>
+   		</li>
+   	</ul>
+
+
+   	<ul class="zhuti_1_ul">
+   		<li><img src="../img/14.JPG" alt="">
+   			<h5>斗破苍穹</h5>
+   			<p>五雷吴磊林允闯荡江湖</p></li>
+   		<li><img src="../img/15.JPG" alt="">
+   			<h5>如懿传</h5>
+   			<p>周迅霍建华演绎清宫风云</p></li>
+   	</ul>
+  </div>
+
+  <div class='zhuti_1_box1_d1'>
+
+   	<img src="../img/21.JPG" 
+   	class="zhuti_1_imgs" alt="">
+   
+  
+   	<ul class="zhuti_1_ul">
+   		<li>
+   			<img src="../img/22.JPG" alt="">
+   			<h5>黄金时代</h5>
+   			<p>古惑仔兄弟大银幕重聚</p>
+   		</li>
+   		<li><img src="../img/23.JPG" alt="">
+   			
+   			<h5>精灵旅社3：疯狂的假期</h5>
+   			<p>百年吸血鬼爆笑追爱</p>
+   		</li>
+   	</ul>
+
+
+   	<ul class="zhuti_1_ul">
+   		<li><img src="../img/24.JPG" alt=""><h5>那年1987</h5>
+
+   			<p>改革开放下小人物爱情沉浮</p>
+   		<li><img src="../img/25.JPG" alt="">
+   			<h5>夜空中总有最大密度的蓝色</h5>
+   			<p>最古怪的男女最动人的爱情</p></li>
+   			
+   	</ul>
+  </div>
+
+
+ </div>
+   </div>
+   <!-- ***** -->
+
+   <div id="zhuti_1">
+   	   <ul class='zhuti_1_left'>
+   	   	<li  class="zhuti_2_li" >小品   </li>
+   	   	<li  class="zhuti_2_li">京剧   </li>
+   	   	<li  class="zhuti_2_li">动画片   </li>
+   	   </ul>
+   	   <ul class='zhuti_1_right'>
+   	   	<li class="zhuti_1_li2">动漫   </li>
+   	   	<li class="zhuti_1_li2">体育   </li>
+   	   	<li class="zhuti_1_li2">   风味人间</li>
+   	   	<li class="zhuti_1_li2">   纪录片</li>
+   	   </ul>
+
+   </div>
+
+   <div id="zhuti_1_box1">
+
+   	<div class='zhuti_1_box1_d2' style="display: block;">
+
+   	<img src="../img/01.JPG" 
+   	class="zhuti_1_imgs" alt="">
+   
+  
+   	<ul class="zhuti_1_ul">
+   		<li>
+   			<img src="../img/02.JPG" alt="">
+   			<h5>亲爱的客栈.互相伤害</h5>
+   			<p>王珂刘涛玩亲亲</p>
+   		</li>
+   		<li><img src="../img/03.JPG" alt="">
+   			<h5>神奇伙伴在哪里</h5>
+   			<p>小猩猩公交车给孕妇让座</p>
+   		</li>
+   	</ul>
+
+
+   	<ul class="zhuti_1_ul">
+   		<li><img src="../img/04.JPG" alt="">
+   			<h5>恕我直言.更新</h5>
+   			<p>颖儿述说惨痛经历</p></li>
+   		<li><img src="../img/05.JPG" alt="">
+   			<h5>奇遇人生</h5>
+   			<p>朴树催泪唱《平凡之路》</p></li>
+   	</ul>
+  </div>
+
+   
+
+   <div class='zhuti_1_box1_d2' >
+
+   	<img src="../img/11.JPG" 
+   	class="zhuti_1_imgs" alt="">
+   
+  
+   	<ul class="zhuti_1_ul">
+   		<li>
+   			<img src="../img/12.JPG" alt="">
+   			<h5>盛唐幻夜[会员抢先看]</h5>
+   			<p>吴倩郑业成探案又谈爱情</p>
+   		</li>
+   		<li><img src="../img/13.JPG" alt="">
+   			<h5>创业时代</h5>
+   			<p>黄轩baby还原热血创业史</p>
+   		</li>
+   	</ul>
+
+
+   	<ul class="zhuti_1_ul">
+   		<li><img src="../img/14.JPG" alt="">
+   			<h5>斗破苍穹</h5>
+   			<p>五雷吴磊林允闯荡江湖</p></li>
+   		<li><img src="../img/15.JPG" alt="">
+   			<h5>如懿传</h5>
+   			<p>周迅霍建华演绎清宫风云</p></li>
+   	</ul>
+  </div>
+
+  <div class='zhuti_1_box1_d2'>
+
+   	<img src="../img/21.JPG" 
+   	class="zhuti_1_imgs" alt="">
+   
+  
+   	<ul class="zhuti_1_ul">
+   		<li>
+   			<img src="../img/22.JPG" alt="">
+   			<h5>黄金时代</h5>
+   			<p>古惑仔兄弟大银幕重聚</p>
+   		</li>
+   		<li><img src="../img/23.JPG" alt="">
+   			
+   			<h5>精灵旅社3：疯狂的假期</h5>
+   			<p>百年吸血鬼爆笑追爱</p>
+   		</li>
+   	</ul>
+
+
+   	<ul class="zhuti_1_ul">
+   		<li><img src="../img/24.JPG" alt=""><h5>那年1987</h5>
+
+   			<p>改革开放下小人物爱情沉浮</p>
+   		<li><img src="../img/25.JPG" alt="">
+   			<h5>夜空中总有最大密度的蓝色</h5>
+   			<p>最古怪的男女最动人的爱情</p></li>
+   			
+   	</ul>
+  </div>
+
+
+ </div>
+   </div>
+
+   <div id="bom">
+   	湖南财经工业职业技术学院 网络许可证: 湘教QS3-200504-000027 湘ICP备05002485号 学院地址：湖南省衡阳市珠晖区狮山路20号
+   	<br> 
+邮政编码：421002 招生热线：0734- 8378042 技术支持：图文信息中心
+<br>
+  	湖南财经工业职业技术学院电子信息系17软件2班常晴 毕业设计
+
+
+   </div>
+   <!-- 公共部分结束 -->
+	
+</body>
+</html>

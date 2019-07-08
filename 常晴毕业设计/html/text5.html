@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>常晴毕业设计</title>
+   <link rel="stylesheet" href="../css/gg.css">
+	<link rel="stylesheet" href="../css/text5.css">
+</head>
+
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script>
+
+	$(function(){
+
+		$('.top_d input').focus(function(){
+         
+         console.log($('.top_d input').val());
+         if($('.top_d input').val()=="请输入关键字"){
+            $(this).val(" ");
+         }  
+      })
+      $(".top_d input").blur(function(){
+      if($(this).val()==" "){
+         $(this).val("请输入关键字");
+      }
+      })
+
+
+		//搜索部分结束
+		$(".daoh_li").hover(function(){
+			$(this).children(".daoh_li_ul").stop().slideDown(500);
+		},function(){
+			$(this).children(".daoh_li_ul").stop().slideUp(300);
+
+		})
+// 导航栏结束
+$(".banner_o li").mouseenter(function(){
+			$(this).addClass("show").siblings().removeClass("show");
+			var index=$(this).index();
+			num=index;
+			$(".banner_ul li ").eq(index).css("display","block").siblings().css("display","none")
+		})
+		var num=0;
+		var timer=null;
+
+		function run(){
+			if(num>5){
+				num=0;
+			}else{
+				num++;
+			}
+
+		$(".banner_o li").eq(num).addClass("show").siblings().removeClass("show");
+		$(".banner_ul li ").eq(num).css("display","block").siblings().css("display","none")
+
+		}
+		function run1(){
+			if(num<0){
+				num=5;
+			}else{
+				num--;
+			}
+
+		$(".banner_o li").eq(num).addClass("show").siblings().removeClass("show");
+		$(".banner_ul li ").eq(num).css("display","block").siblings().css("display","none")
+
+		}
+		timer=setInterval(run,800);
+		$("#banner").mouseenter(function(){
+			clearInterval(timer);
+		}).mouseleave(function(){
+			clearInterval(timer);
+		timer=setInterval(run,800);
+
+
+		})
+		$(".banner_right").click(function(){
+		  run();
+
+
+		})
+		$(".banner_left").click(function(){
+			run1();
+
+
+		})
+
+
+
+		// banner结束
+      $("#box1_di_ul li").hover(function(){
+         $(this).css("opacity",0.7);
+         $(this).children("a").css("color","red");
+
+      },function(){
+          $(this).css("opacity",1)
+            $(this).children("a").css("color","blue");
+
+      }) 
+     
+     
+
+
+		})
+	</script>
+		
+
+<body>
+	<div id="top">
+		<div class="top_d">
+		<input type="text" value="请输入关键字"><button>搜索</button>
+		</div>
+		<ul class="top_ul">
+            		<li><img src="../img/web01.png" alt=""><a href="	#">设为首页</a></li>
+            		<li><img src="../img/web02.png" alt=""><a href="	#">加入收藏</a></li>
+            		<li><img src="../img/web03.png" alt=""><a href="	#">联系我们</a></li>
+            		<li style="font-size: 40px ; font-weight: 800;">带你仰望世界</li>
+    		
+         </ul>
+
+	</div>
+
+	<div id="daoh">
+   	
+   	<ul class="daoh_ul">
+   		<li class="daoh_li"><a href="text1.html">首页</a></li>
+   		<li class="daoh_li"><a href="text2.html">电视剧</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">还珠格格</a></li>
+               <li><a href="#">西游记</a></li>
+               <li><a href="#">一起来看流星雨</a></li>
+               <li><a href="#">封神榜</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text3.html">小品</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">小品</a></li>
+   				<li><a href="#">小品</a></li>
+   				<li><a href="#">小品</a></li>
+   				<li><a href="#">小品</a></li>
+   			</ul>
+
+   		</li>
+   		<li class="daoh_li"><a href="text4.html">京剧</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">京剧</a></li>
+   				<li><a href="#">京剧</a></li>
+   				<li><a href="#">京剧</a></li>
+   				<li><a href="#">京剧</a></li>
+   			</ul>
+   		</li >
+   		<li class="daoh_li"><a href="text5.html">综艺</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">综艺</a></li>
+   				<li><a href="#">综艺</a></li>
+   				<li><a href="#">综艺</a></li>
+   				<li><a href="#">综艺</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text6.html">动画片</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">动画片</a></li>
+   				<li><a href="#">动画片</a></li>
+   				<li><a href="#">动画片</a></li>
+   				<li><a href="#">动画片</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text7.html">电影</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">电影</a></li>
+   				<li><a href="#">电影</a></li>
+   				<li><a href="#">电影</a></li>
+   				<li><a href="#">电影</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text8.html">其他</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">其他</a></li>
+   				<li><a href="#">其他</a></li>
+   				<li><a href="#">其他</a></li>
+   				<li><a href="#">其他</a></li>
+   			</ul>
+   		</li>
+   		
+   	</ul>
+   	
+
+   </div>
+   <!-- 导航栏结束 -->
+
+   <div id="banner">
+
+   	  <ul class="banner_ul">
+   	  	<li style="display: block">><img src="../img/banner4.jpg" alt="" </li>
+   	  	<li><img src="../img/banner2.jpg" alt=""></li>
+   	  	<li><img src="../img/banner3.jpg" alt=""></li>
+   	  	<li><img src="../img/banner1.jpg" alt=""></li>
+   	  	<li><img src="../img/banner5.jpg" alt=""></li>
+   	  	<li><img src="../img/banner6.jpg" alt=""></li>
+   	  </ul>
+   	  <ul class="banner_o">
+   	  	<li class="show">1</li>
+   	  	<li>2</li>
+   	  	<li>3</li>
+   	  	<li>4</li>
+   	  	<li>5</li>
+   	  	<li>6</li>
+   	  </ul>
+   	  <span class='banner_left'><</span>
+   	  <span class='banner_right'>></span>
+   </div>
+   <!-- banner结束 -->
+   <div id="zhuti">综艺<span class="ri">了解更多</span></div>
+   <!-- 公共部分结束 -->
+
+
+
+   <div class="ll"> <span class="ll_s" >热门综艺 |</span><span  class="ll_s" >最近更新 </span>      </div>
+
+
+   <div id="box1">
+      <div class="box1_di"> 
+      <ul   id="box1_di_ul" style="display: block;">
+         <li><img src=" ../img/zy1.jpg" alt=""><a href="#"> 加入关注</a></li>
+         <li><img src=" ../img/zy2.jpg" alt=""><a href="#">加入关注 </a></li>
+         <li><img src=" ../img/zy3.jpg" alt=""><a href="#">加入关注 </a></li>
+         <li><img src=" ../img/zy4.jpg" alt=""><a href="#">加入关注 </a></li>
+         <li><img src=" ../img/zy5.jpg" alt=""><a href="#"> 加入关注</a></li>
+         <li><img src=" ../img/zy6.jpg" alt=""><a href="#">加入关注 </a></li>
+         <li><img src=" ../img/zy7.jpg" alt=""><a href="#"> 加入关注</a></li>
+         <li><img src=" ../img/zy8.jpg" alt=""><a href="#">加入关注 </a></li>
+          <li><img src=" ../img/zy11.jpg" alt=""><a href="#">加入关注</a></li>
+         <li><img src=" ../img/zy12.jpg" alt=""><a href="#">加入关注</a></li>
+         <li><img src=" ../img/zy13.jpg" alt=""><a href="#">加入关注</a></li>
+         <li><img src=" ../img/zy14.jpg" alt=""><a href="#">加入关注</a></li>
+         <li><img src=" ../img/zy15.jpg" alt=""><a href="#">加入关注</a></li>
+         <li><img src=" ../img/zy16.jpg" alt=""><a href="#">加入关注</a></li>
+         
+      </ul>
+    
+        
+  
+    
+   </div>
+    </div>
+
+
+
+   <!-- ****** -->
+
+<div id="box2">
+      <div class="box2_d1">
+         <h2>综艺排名</h2> 
+         <hr color="#945ad5">
+         <ul>
+            <li><a href="#">1：这就是灌篮</a>295022</li>
+            <li><a href="#">2：火星情报局</a>195949</li>
+            <li><a href="#">
+            3：蒙面唱将猜猜猜</a>98819</li>
+            <li><a href="#">
+            4：快乐大本营</a>51836</li>
+            <li><a href="#">5：创意中国</a>46254</li>
+            <li><a href="#">6：奇葩说</a>45001</li>
+            <li><a href="#">7：你好生活家</a>28478</li>
+            <li><a href="#">8：我就是演员</a>16975</li>
+            <li><a href="#">9：妻子的浪漫旅行</a>16015</li>
+            <li><a href="#">10：梦想的声音</a>15907</li>
+            
+         </ul>
+
+
+      </div>
+
+      <div class="box2_d3">
+
+         <h2> 关于综艺，网友正在热搜</h2>
+         <hr color="#945ad5">
+         <ul>
+            <li><a href="#">1：朱雀一号未能入轨   </a>426887</li>
+            <li><a href="#">2：夫妻救助警犬立案  </a>399066</li>
+            <li><a href="#">3：北豚尾猴获救  </a>376345</li>
+            <li><a href="#">4：谢娜 我就是演员   </a>353399</li>
+            <li><a href="#">6：ofo退押金延长   </a>320479</li>
+            <li><a href="#">7：女研生在日本死亡   </a>319955</li>
+            <li><a href="#">8：许家印捐款1亿元   </a>315980</li>
+            <li><a href="#">9：勇士 尼克斯  </a>302182</li> 
+            <li><a href="#">10：FF发布声明 </a>301208</li>
+            
+
+            
+            
+         </ul>
+     
+
+
+      </div>
+
+   
+  
+   
+  
+
+      <div class="box2_d2">
+       
+         <h2>综艺关注点</h2>
+         <hr color="#945ad5">
+         <ul>
+            <li><a href="#">1：综艺奇观挑战视听极致</a>关注更多</li>
+            <li><a href="#">2：综艺舞台上舞出自己</a>关注更多</li>
+            <li><a href="#">3：综艺应摆脱粉丝经济绑架 </a>关注更多</li>
+            <li><a href="#">4：综艺泄密李小璐最真实感情 </a>关注更多</li>
+            
+            
+
+         </ul>
+
+      </div>
+
+      
+
+
+
+
+   </div>
+
+
+
+
+
+
+   <!-- 尾部 -->
+  <div id="bom">
+      湖南财经工业职业技术学院 网络许可证: 湘教QS3-200504-000027 湘ICP备05002485号 学院地址：湖南省衡阳市珠晖区狮山路20号
+      <br> 
+邮政编码：421002 招生热线：0734- 8378042 技术支持：图文信息中心
+<br>
+   湖南财经工业职业技术学院电子信息系17软件2班常晴 毕业设计
+
+
+   </div>
+	
+</body>
+</html>

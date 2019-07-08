@@ -1,0 +1,107 @@
+#box2 {
+	width: 1200px;
+	height: 70px;
+	margin: 10px auto;
+	/*border: 1px #945ad5 solid;*/
+}
+.box2_d1 {
+	width: 1200px;
+	height: 70px;	
+}
+.box2_d1 ul li{
+	float: left;
+	margin-left:4px; 
+}
+.box2_d1 ul li img{
+	width: 195px;
+	height: 70px;
+
+
+}
+
+.box2_d2{
+	width: 1160px;
+	
+
+	padding-left: 40px;
+	height: 120px;
+	/*border: 1px red solid;*/
+    margin:0 auto;
+
+
+}
+.box2_d2 li{
+	float: left;
+	width: 232px;
+}
+.box2_d2 li a{
+	display: inline-block;
+	width: 80px;
+
+}
+.box2_d2 li a:hover{
+	color: red;
+}
+#tb1{
+	width: 1200px;
+	height: 50px;
+	margin: 0 auto;
+	background: url("../img/71.JPG") no-repeat left center;
+
+}
+#box3 ,#box3 ul{
+	width: 1200px;
+	height: 400px;
+	margin:0 auto;
+}
+#box3 ul li{
+	float: left;
+	width: 300px;
+	height: 200px;
+	text-align: center;
+	position: relative;
+}
+#box3 ul li img{
+	width: 295px;
+	height: 170px;
+}
+.gg_di{
+	width: 295px;
+	height: 170px;
+	line-height:170px;
+	background: #09080973;
+	text-align: center;
+	position: absolute;
+	top:-170px;
+	left:1px;
+	display: none;
+}
+
+.gg_di img{
+	
+	width: 50px!important;
+	height: 50px!important;
+}
+
+
+#tb2{
+	width: 1200px;
+	height: 50px;
+	margin: 0 auto;
+	background: url("../img/72.JPG") no-repeat left center;
+}
+#box4{
+	width: 1200px;
+	height: 150px;
+	margin: auto;
+}
+#box4 li{
+	float: left;
+	width: 150px;
+	text-align: center;
+}
+#box4 li img{
+	width: 120px;
+	height: 120px;
+}
+

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>常晴毕业设计</title>
+	<link rel="stylesheet" href="../css/gg.css">
+   <link rel="stylesheet" href="../css/text7.css">
+</head>
+
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script>
+
+	$(function(){
+
+		$('.top_d input').focus(function(){
+         
+         console.log($('.top_d input').val());
+         if($('.top_d input').val()=="请输入关键字"){
+            $(this).val(" ");
+         }  
+      })
+      $(".top_d input").blur(function(){
+      if($(this).val()==" "){
+         $(this).val("请输入关键字");
+      }
+      })
+
+
+		//搜索部分结束
+		$(".daoh_li").hover(function(){
+			$(this).children(".daoh_li_ul").stop().slideDown(500);
+		},function(){
+			$(this).children(".daoh_li_ul").stop().slideUp(300);
+
+		})
+// 导航栏结束
+$(".banner_o li").mouseenter(function(){
+			$(this).addClass("show").siblings().removeClass("show");
+			var index=$(this).index();
+			num=index;
+			$(".banner_ul li ").eq(index).css("display","block").siblings().css("display","none")
+		})
+		var num=0;
+		var timer=null;
+
+		function run(){
+			if(num>5){
+				num=0;
+			}else{
+				num++;
+			}
+
+		$(".banner_o li").eq(num).addClass("show").siblings().removeClass("show");
+		$(".banner_ul li ").eq(num).css("display","block").siblings().css("display","none")
+
+		}
+		function run1(){
+			if(num<0){
+				num=5;
+			}else{
+				num--;
+			}
+
+		$(".banner_o li").eq(num).addClass("show").siblings().removeClass("show");
+		$(".banner_ul li ").eq(num).css("display","block").siblings().css("display","none")
+
+		}
+		timer=setInterval(run,800);
+		$("#banner").mouseenter(function(){
+			clearInterval(timer);
+		}).mouseleave(function(){
+			clearInterval(timer);
+		timer=setInterval(run,800);
+
+
+		})
+		$(".banner_right").click(function(){
+		  run();
+
+
+		})
+		$(".banner_left").click(function(){
+			run1();
+
+
+		})
+
+
+
+		// banner结束
+		})
+	</script>
+		
+
+<body>
+	<div id="top">
+		<div class="top_d">
+		<input type="text" value="请输入关键字"><button>搜索</button>
+		</div>
+		<ul class="top_ul">
+            		<li><img src="../img/web01.png" alt=""><a href="	#">设为首页</a></li>
+            		<li><img src="../img/web02.png" alt=""><a href="	#">加入收藏</a></li>
+            		<li><img src="../img/web03.png" alt=""><a href="	#">联系我们</a></li>
+            		<li style="font-size: 40px ; font-weight: 800;">带你仰望世界</li>
+    		
+         </ul>
+
+	</div>
+
+	<div id="daoh">
+   	
+   	<ul class="daoh_ul">
+   		<li class="daoh_li"><a href="text1.html">首页</a></li>
+   		<li class="daoh_li"><a href="text2.html">电视剧</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">还珠格格</a></li>
+               <li><a href="#">西游记</a></li>
+               <li><a href="#">一起来看流星雨</a></li>
+               <li><a href="#">封神榜</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text3.html">小品</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">小品</a></li>
+   				<li><a href="#">小品</a></li>
+   				<li><a href="#">小品</a></li>
+   				<li><a href="#">小品</a></li>
+   			</ul>
+
+   		</li>
+   		<li class="daoh_li"><a href="text4.html">京剧</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">京剧</a></li>
+   				<li><a href="#">京剧</a></li>
+   				<li><a href="#">京剧</a></li>
+   				<li><a href="#">京剧</a></li>
+   			</ul>
+   		</li >
+   		<li class="daoh_li"><a href="text5.html">综艺</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">综艺</a></li>
+   				<li><a href="#">综艺</a></li>
+   				<li><a href="#">综艺</a></li>
+   				<li><a href="#">综艺</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text6.html">动画片</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">动画片</a></li>
+   				<li><a href="#">动画片</a></li>
+   				<li><a href="#">动画片</a></li>
+   				<li><a href="#">动画片</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text7.html">电影</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">电影</a></li>
+   				<li><a href="#">电影</a></li>
+   				<li><a href="#">电影</a></li>
+   				<li><a href="#">电影</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text8.html">其他</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">其他</a></li>
+   				<li><a href="#">其他</a></li>
+   				<li><a href="#">其他</a></li>
+   				<li><a href="#">其他</a></li>
+   			</ul>
+   		</li>
+   		
+   	</ul>
+   	
+
+   </div>
+   <!-- 导航栏结束 -->
+
+   <div id="banner">
+
+   	  <ul class="banner_ul">
+   	  	<li style="display: block">><img src="../img/banner4.jpg" alt="" </li>
+   	  	<li><img src="../img/banner2.jpg" alt=""></li>
+   	  	<li><img src="../img/banner3.jpg" alt=""></li>
+   	  	<li><img src="../img/banner1.jpg" alt=""></li>
+   	  	<li><img src="../img/banner5.jpg" alt=""></li>
+   	  	<li><img src="../img/banner6.jpg" alt=""></li>
+   	  </ul>
+   	  <ul class="banner_o">
+   	  	<li class="show">1</li>
+   	  	<li>2</li>
+   	  	<li>3</li>
+   	  	<li>4</li>
+   	  	<li>5</li>
+   	  	<li>6</li>
+   	  </ul>
+   	  <span class='banner_left'><</span>
+   	  <span class='banner_right'>></span>
+   </div>
+   <!-- banner结束 -->
+   <div id="zhuti">电影<span class="ri">了解更多</span></div>
+   <!-- 公共部分结束 -->
+
+
+
+ <div id="box2">
+    <h2>最新电影</h2>
+
+    <hr color="#945ad5" />
+    <br> <br>
+        <img src="../img/img_01.jpg" width="129" height="130" />
+        <img src="../img/img_02.jpg" width="129" height="130" />
+        <img src="../img/img_03.jpg" width="129" height="130" />
+        <img src="../img/img_04.jpg" width="129" height="130" />
+        <img src="../img/img_05.jpg" width="129" height="130" />
+        <img src="../img/img_06.jpg" width="129" height="130" />
+        <img src="../img/img_07.jpg" width="129" height="130" />
+        <img src="../img/img_08.jpg" width="129" height="130" />
+        <img src="../img/img_09.jpg" width="129" height="130" /> 
+</div>
+
+   <!-- ****** -->
+
+   <div id="box3">
+      <h2>热门电影介绍</h2>
+      <hr color="#945ad5">
+
+      <div class="box_l">
+   <p ><span style="color: red;text-decoration: underline;">西游降魔篇</span> <span style="color: blue;text-decoration: underline;">高清视频在线观看 爱奇艺 </span> </p>
+   <p>电影时间上映时间：2013年2月10日</p>
+   <p>导演：<span style="color: red;text-decoration: underline;">周星驰  郭子健</span></p>
+   <p>发行公司：安乐影片</p>
+   <p>主演：<span style="color: blue;text-decoration: underline;">黄渤 文章 舒淇 周秀娜 释行宇 罗志祥    何文辉 李尚正</span></p>
+   <p>片长：<span style="color: red;">110分钟</span></p>
+   <p>类型：冒险 奇幻 喜剧</p>
+   <p>定价：<span style="color: red;font-size: 30px;">150元</span></p>
+   <p>简介 ：受气的唐僧、暴戾的孙悟空、帅气的猪八戒、   妩媚的沙僧，完全颠覆
+   版西游记，周星驰时隔15年自编自导再战西游。    这是个妖魔横行的世界，百
+   姓苦不堪言。年轻的驱魔人玄奘以“舍小我，成大我”的   大无畏精神，历尽
+   艰难险阻，依次收复水妖、猪妖以及妖王之王孙悟空为徒，并用“爱”将他
+   们感化......</p>
+
+
+      </div>
+      <div class="box_r">
+         <img src="../img/moviebanner.jpg" width="300" height="350" alt="" >
+
+      </div>
+
+
+
+   </div>
+   <div class="w_p"></div>
+
+   <div class="box4_1">
+
+      <p><span style="color: red;">影迷无敌001 </span>   
+         <span style="color:#ccc; font-size: 12px;">2016-6-12 15:38:37</span></p>
+      <br>
+
+<p>请剧情党们不要太较真电影对魔兽历史的更改，毕竟翻拍的电影，多少会有些出入，我们看的是情怀，哈哈。。。 </p>
+<p style="color: red;font-size: 14px;">来自:大众点评网友</p>
+
+</div>
+   <div class="box4_2">
+      <p><span style="color: red;">时光不老 </span>   
+         <span style="color:#ccc; font-size: 12px;">2015-3-2 15:05:37</span></p>
+      <br>
+
+<p>个人认为小时代毫无看点，看了不到半小时就要睡着了，我已无力吐槽，建议大家还是去读原著吧！！！  </p>
+<p style="color: red;font-size: 14px;">来自：星光影院网友
+</p>
+
+   </div>
+   <div class="box4_3">
+      <p><span style="color: red;">cocoke   </span>   
+         <span style="color:#ccc; font-size: 12px;">2016-2-14 10:38:36</span></p>
+      <br>
+
+<p>星爷的每一部电影都很经典，重复地看过很多遍，每次都有更深刻的理解和更深的感悟，同样期待《美人鱼》。 
+来自：美团网网友 </p>
+<p style="color: red;font-size: 14px;">来自:大众点评网友</p>
+
+   </div>
+
+
+
+
+
+
+
+
+
+   <!-- 尾部 -->
+  <div id="bom">
+      湖南财经工业职业技术学院 网络许可证: 湘教QS3-200504-000027 湘ICP备05002485号 学院地址：湖南省衡阳市珠晖区狮山路20号
+      <br> 
+邮政编码：421002 招生热线：0734- 8378042 技术支持：图文信息中心
+<br>
+   湖南财经工业职业技术学院电子信息系17软件2班常晴 毕业设计
+
+
+   </div>
+	
+</body>
+</html>

@@ -1,0 +1,88 @@
+
+#box2{
+	width: 1200px;
+	height: 240px;
+	margin:0 auto;
+}
+#box2 .p_l{
+
+	width: 800px;
+	height: 200px;
+	margin-top: 20px;
+	float: left;
+	text-indent: 2em;
+}
+#box2 .p_r{
+
+	width: 400px;
+	height: 200px;
+	margin-top: 20px;
+	float: left;
+}
+#box2 .p_r img{
+	width:350px;
+	height: 200px;
+
+}
+#box3{
+	width: 1200px;
+	height: 240px;
+	margin:20px auto;
+	background: url(../img/43.JPG)no-repeat center center ;
+	background-size: 150px 200px;
+}
+.l_l{
+
+	width: 1200px;
+	height: 80px;
+	line-height: 80px;
+	margin: 0 auto;
+	border-bottom: 2px #945ad5 solid;
+}
+.p1_l{
+	float: left;
+	width: 400px;
+	height: 240px;
+	text-indent: 2em;
+
+}
+.p1_r{
+	float: right;
+	width: 400px;
+	height: 240px;
+	text-indent: 2em;
+	
+}
+
+/******************/
+#box4{
+	position: relative;
+	width: 1198px;
+	height: 311px;
+	margin:0 auto;
+	border: 1px solid #945ad5;
+	overflow: hidden;
+}
+#box4 .box4_ul{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 20000px;
+}
+#box4 .box4_ul li{
+	width: 230px;
+	height: 310px;
+	border: 1px solid #945ad5;
+	overflow: hidden;
+	float: left;
+
+}
+
+#box4 .box4_ul li img{
+	width: 231px;
+	height: 312px;
+}
+
+
+
+

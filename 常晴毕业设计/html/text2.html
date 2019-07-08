@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>常晴毕业设计</title>
+	<link rel="stylesheet" href="../css/gg.css">
+   <link rel="stylesheet" href="../css/text2.css">
+
+</head>
+
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script>
+
+	$(function(){
+
+		$('.top_d input').focus(function(){
+         
+         console.log($('.top_d input').val());
+         if($('.top_d input').val()=="请输入关键字"){
+            $(this).val(" ");
+         }  
+      })
+      $(".top_d input").blur(function(){
+      if($(this).val()==" "){
+         $(this).val("请输入关键字");
+      }
+      })
+
+
+		//搜索部分结束
+		$(".daoh_li").hover(function(){
+			$(this).children(".daoh_li_ul").stop().slideDown(500);
+		},function(){
+			$(this).children(".daoh_li_ul").stop().slideUp(300);
+
+		})
+// 导航栏结束
+$(".banner_o li").mouseenter(function(){
+			$(this).addClass("show").siblings().removeClass("show");
+			var index=$(this).index();
+			num=index;
+			$(".banner_ul li ").eq(index).css("display","block").siblings().css("display","none")
+		})
+		var num=0;
+		var timer=null;
+
+		function run(){
+			if(num>5){
+				num=0;
+			}else{
+				num++;
+			}
+
+		$(".banner_o li").eq(num).addClass("show").siblings().removeClass("show");
+		$(".banner_ul li ").eq(num).css("display","block").siblings().css("display","none")
+
+		}
+		function run1(){
+			if(num<0){
+				num=5;
+			}else{
+				num--;
+			}
+
+		$(".banner_o li").eq(num).addClass("show").siblings().removeClass("show");
+		$(".banner_ul li ").eq(num).css("display","block").siblings().css("display","none")
+
+		}
+		timer=setInterval(run,800);
+		$("#banner").mouseenter(function(){
+			clearInterval(timer);
+		}).mouseleave(function(){
+			clearInterval(timer);
+		timer=setInterval(run,800);
+
+
+		})
+		$(".banner_right").click(function(){
+		  run();
+
+
+		})
+		$(".banner_left").click(function(){
+			run1();
+
+
+		})
+
+
+
+		// banner结束
+     $("#box3 ul li").hover(function(){
+
+      $(this).children(".gg_di").css("top",0).stop().slideDown(500);
+
+     }
+      ,function(){
+         $(this).children(".gg_di").css("top",-170).stop().slideUp(0);
+
+     })
+
+
+		})
+	</script>
+		
+
+<body>
+	<div id="top">
+		<div class="top_d">
+		<input type="text" value="请输入关键字"><button>搜索</button>
+		</div>
+		<ul class="top_ul">
+            		<li><img src="../img/web01.png" alt=""><a href="	#">设为首页</a></li>
+            		<li><img src="../img/web02.png" alt=""><a href="	#">加入收藏</a></li>
+            		<li><img src="../img/web03.png" alt=""><a href="	#">联系我们</a></li>
+            		<li style="font-size: 40px ; font-weight: 800;">带你仰望世界</li>
+    		
+         </ul>
+
+	</div>
+
+	<div id="daoh">
+   	
+   	<ul class="daoh_ul">
+   		<li class="daoh_li"><a href="text1.html">首页</a></li>
+   		<li class="daoh_li"><a href="text2.html">电视剧</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">还珠格格</a></li>
+   				<li><a href="#">西游记</a></li>
+   				<li><a href="#">一起来看流星雨</a></li>
+   				<li><a href="#">封神榜</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text3.html">小品</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">小品</a></li>
+   				<li><a href="#">小品</a></li>
+   				<li><a href="#">小品</a></li>
+   				<li><a href="#">小品</a></li>
+   			</ul>
+
+   		</li>
+   		<li class="daoh_li"><a href="text4.html">京剧</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">京剧</a></li>
+   				<li><a href="#">京剧</a></li>
+   				<li><a href="#">京剧</a></li>
+   				<li><a href="#">京剧</a></li>
+   			</ul>
+   		</li >
+   		<li class="daoh_li"><a href="text5.html">综艺</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">综艺</a></li>
+   				<li><a href="#">综艺</a></li>
+   				<li><a href="#">综艺</a></li>
+   				<li><a href="#">综艺</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text6.html">动画片</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">动画片</a></li>
+   				<li><a href="#">动画片</a></li>
+   				<li><a href="#">动画片</a></li>
+   				<li><a href="#">动画片</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text7.html">电影</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">电影</a></li>
+   				<li><a href="#">电影</a></li>
+   				<li><a href="#">电影</a></li>
+   				<li><a href="#">电影</a></li>
+   			</ul>
+   		</li>
+   		<li class="daoh_li"><a href="text8.html">其他</a>
+   			<ul class="daoh_li_ul">
+   				<li><a href="#">其他</a></li>
+   				<li><a href="#">其他</a></li>
+   				<li><a href="#">其他</a></li>
+   				<li><a href="#">其他</a></li>
+   			</ul>
+   		</li>
+   		
+   	</ul>
+   	
+
+   </div>
+   <!-- 导航栏结束 -->
+
+   <div id="banner">
+
+   	  <ul class="banner_ul">
+   	  	<li style="display: block">><img src="../img/banner4.jpg" alt="" </li>
+   	  	<li><img src="../img/banner2.jpg" alt=""></li>
+   	  	<li><img src="../img/banner3.jpg" alt=""></li>
+   	  	<li><img src="../img/banner1.jpg" alt=""></li>
+   	  	<li><img src="../img/banner5.jpg" alt=""></li>
+   	  	<li><img src="../img/banner6.jpg" alt=""></li>
+   	  </ul>
+   	  <ul class="banner_o">
+   	  	<li class="show">1</li>
+   	  	<li>2</li>
+   	  	<li>3</li>
+   	  	<li>4</li>
+   	  	<li>5</li>
+   	  	<li>6</li>
+   	  </ul>
+   	  <span class='banner_left'><</span>
+   	  <span class='banner_right'>></span>
+   </div>
+   <!-- banner结束 -->
+   <div id="zhuti">电视剧<span class="ri">了解更多</span></div>
+   <!-- 公共部分结束 -->
+   <div id="box2">
+      <div class='box2_d1'>
+         <ul>
+            <li><img src="../img/91.JPG" alt=""></li>
+            <li><img src="../img/92.JPG" alt=""></li>
+            <li><img src="../img/93.JPG" alt=""></li>
+            <li><img src="../img/94.JPG" alt=""></li>
+            <li><img src="../img/95.JPG" alt=""></li>
+            <li><img src="../img/96.JPG" alt=""></li>
+         </ul>
+
+      </div>
+       </div>
+
+      <div  class='box2_d2' >
+         <ul>
+            <li>
+               <h3>按类型</h3>
+               <a href="#">历史</a>
+               <a href="#">古装</a>
+               <a href="#">喜剧</a>
+               <a href="#">乡村</a>
+               <a href="#">经典</a>
+               <a href="#">战争</a>
+               <a href="#">动作</a>
+               <a href="#">奇幻</a>
+            </li>
+            <li>
+               <h3>按地区</h3>
+               <a href="#">内地</a>
+               <a href="#">香港</a>
+               <a href="#">台湾</a>
+               <a href="#">日本</a>
+               <a href="#">英国</a>
+               <a href="#">其他</a>
+            
+            </li>
+            <li>
+               <h3>按年代</h3>
+               <a href="#">2018</a>
+               <a href="#">2017</a>
+               <a href="#">2016</a>
+               <a href="#">2015</a>
+               <a href="#">2014</a>
+               <a href="#">2013</a>
+               <a href="#">全部</a>
+            </li>
+            <li>
+               <h3>按演员</h3>
+               <a href="#">刘涛</a>
+               <a href="#">王源</a>
+               <a href="#">李易峰</a>
+               <a href="#">杨颖</a>
+               <a href="#">黄晓明</a>
+               <a href="#">迪丽热巴</a>
+               <a href="#">赵丽颖</a>
+            </li>
+            <li>
+               <h3>热搜</h3>
+               <a href="#">凉生</a>
+               <a href="#">创业时代</a>
+               <a href="#">花千骨</a>
+               <a href="#">双世宠妃</a>
+            </li>
+         </ul>
+   </div>
+
+   <!-- ****** -->
+   <div id="tb1"></div>
+   <div id="box3">
+      <ul>
+         <li>
+            <img src="../img/81.JPG" alt="">
+            <p>双世宠妃</p>
+            <div class="gg_di">
+
+               <p style="color: red;"> 双世宠妃
+                 
+               </p>
+
+            </div>
+
+         </li>
+         <li><img src="../img/82.JPG" alt="">
+            <p>如懿传</p>
+            <div class="gg_di">
+
+               <p style="color: red;"> 如懿传 </p>
+
+            </div>
+         </li>
+         <li><img src="../img/83.JPG" alt="">
+            <p>绝密任务</p>
+            <div class="gg_di">
+
+               <p style="color: red;"> 绝密任务 </p>
+
+            </div>
+         </li>
+         <li><img src="../img/84.JPG" alt="">
+            <p>战地枪王</p>
+            <div class="gg_di">
+
+               <p style="color: red;"> 战地枪王 </p>
+
+            </div>
+         </li>
+         <li><img src="../img/85.JPG" alt="">
+            <p>斗破苍穹</p>
+            <div class="gg_di">
+
+               <p style="color: red;"> 斗破苍穹 </p>
+
+            </div>
+         </li>
+         <li><img src="../img/86.JPG" alt="">
+            <p>你迟到的许多年</p>
+            <div class="gg_di">
+
+               <p style="color: red;"> 你迟到的许多年 </p>
+
+            </div>
+         </li>
+         <li><img src="../img/87.JPG" alt="">
+            <p>凉生</p>
+            <div class="gg_di">
+
+               <p style="color: red;"> 凉生 </p>
+
+            </div>
+         </li>
+         <li><img src="../img/88.JPG" alt="">
+            <p>荒原</p>
+            <div class="gg_di">
+
+               <p style="color: red;"> 荒原 </p>
+
+            </div>
+         </li>
+      </ul>
+
+
+   </div>
+
+   <div id="tb2"></div>
+
+    <div id="box4">
+      <ul>
+         <li><img src="../img/1011.JPG" alt="">
+            <p>邢昭林</p>
+
+         </li>
+         <li><img src="../img/1012.JPG" alt="">
+            <p>孙悦</p>
+         </li>
+         <li><img src="../img/1013.JPG" alt="">
+            <p>殷桃</p>
+         </li>
+         <li><img src="../img/1014.JPG" alt="">
+            <p>黄轩</p>
+         </li>
+         <li><img src="../img/1015.JPG" alt="">
+            <p>倪大红</p>
+         </li>
+         <li><img src="../img/1016.JPG" alt="">
+            <p>秦海璐</p>
+         </li>
+         <li><img src="../img/1017.JPG" alt="">
+            <p>钟汉良</p>
+         </li>
+         <li><img src="../img/1018.JPG" alt="">
+            <p>蒋雯丽</p>
+         </li>
+      </ul>
+
+
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- 尾部 -->
+  <div id="bom">
+      湖南财经工业职业技术学院 网络许可证: 湘教QS3-200504-000027 湘ICP备05002485号 学院地址：湖南省衡阳市珠晖区狮山路20号
+      <br> 
+邮政编码：421002 招生热线：0734- 8378042 技术支持：图文信息中心
+<br>
+   湖南财经工业职业技术学院电子信息系17软件2班常晴 毕业设计
+
+
+   </div>
+	
+</body>
+</html>
