@@ -7,8 +7,9 @@
 
 (function emojiCursor() {
   
-  var possibleEmoji = ["😀", "😂", "😆", "😊"];
-  // var possibleEmoji = ["😂"];
+  var possibleEmoji = ["😀", "😂", "😆", "😊", "😎"];
+  // var possibleEmoji = ["🍐", "🐶", "😎", "🔔","🏡","😡","💀","🏥","🐧","🎵","🔥", "👆"];
+  // var possibleEmoji = ["😊"];
   var width = window.innerWidth;
   var height = window.innerHeight;
   var cursor = {x: width/2, y: width/2};
@@ -89,7 +90,7 @@
       "display": "block",
       "pointerEvents": "none",
       "z-index": "10000000",
-      "fontSize": "24px",
+      "fontSize": "30px",
       "will-change": "transform"
     };
 

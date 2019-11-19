@@ -31,6 +31,9 @@ img {
 i{
   cursor: pointer;
 }
+
+
+
 /* 页面样式 */
 /* header 头部部分 开始*/
 .header{
@@ -68,7 +71,9 @@ nav{
   line-height: 36px;
   text-align: center;
   font-size: 12px;
-  background: #1fe2ef;
+  /* background: #1fe2ef; */
+  /* background: #3bac8f; */
+  background: #3bac8f;
   box-sizing: border-box;
   font-family: "宋体";
   font-weight: 700;
@@ -114,16 +119,18 @@ nav{
   height: 100%;
   display: block;
   float: left;
-  background: #1fe2ef;
+  background: #3bac8f;
   margin-right: 1px;
   border-right: 1px solid #fff;
   cursor: pointer;
 }
 .nav-main>li>a{
   color: #fff;
+  font-family: "Times New Roman";
+  font-size: 14px;
 }
 .nav-main>li:hover{
-  background: #059be0;
+  background: #46c5a4;
 }
 /*隐藏盒子设置*/
 .hidden-box{
@@ -145,7 +152,7 @@ nav{
   border-bottom: 1px solid #07bfc5;
 }
 .hidden-box li:hover{
-  background: #07bfc5;
+  background: #46c5a4;
   color: #fff;
 }
 /*隐藏盒子位置设置*/

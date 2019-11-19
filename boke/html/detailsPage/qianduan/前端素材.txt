@@ -1,0 +1,35 @@
+H5:
+用于绘画的 canvas 元素
+用于媒介回放的 video 和 audio 元素
+对本地离线存储的更好的支持
+新的特殊内容元素，比如 article、footer、header、nav、section
+新的表单控件，比如 calendar、date、time、email、url、search
+
+
+关于H5中section和article的区别：
+article元素代表文档、页面或应用程序中 独立的、完整的、可以独自被外部引用的内容。
+
+section元素代表网页或者应用程序页面的一个一般的区块。一个section通常由内容及标题组成，可以用来描述章节、标签式对话框中的各种标签页、论文中带编号的区块。
+
+注：section和article极其相似，section主要用于内容不可脱离上下文，article作为一个完整独立的内容存在。比如说一篇博文是article，他下面的评论整体为section，因为不能脱离上文，但是评论整体中的每个评论又是个独立的article。
+
+article是一个特殊的section标签，比section具有更明确的语义，代表一个独立的、完整的内容块。
+
+article元素是可以嵌套使用的。
+
+
+
+H5 Canvas 画布
+在H5中可以通过<canvas> 标签来定义一个画布
+
+操作步骤：
+//获取画布元素
+var c=document.getElementById("myCanvas");
+//创建一个画布实例
+var ctx=c.getContext("2d");
+//绘制一个矩形
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.fillStyle="#0000ff";
+ctx.fillRect(20,20,150,100);
+
