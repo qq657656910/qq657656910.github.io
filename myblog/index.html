@@ -14,7 +14,17 @@
         a{
             text-decoration: none;
             margin-top: 20px;
+            color: #ff3030b0;
+            transition: all .5s;
+            font-size: 20px;
+            letter-spacing:3px;
+            font-family: "宋体";
+
         }
+        a:hover{
+            font-size: 25px;
+        }
+
         body{
             background-image: url("./images/banner1.jpg");
             background-repeat: no-repeat;
@@ -54,7 +64,8 @@
         height: 700px;
         margin: 0 auto;
     }
-    h1{
+    
+    h1,h3{
         text-align: center;
     }
    .box .main p{
@@ -65,10 +76,17 @@
         display: inline-block;
         width: 80%;
         height: 30px;
+        line-height: 30px;
         text-align: center;
         border-bottom: 2px solid #000;
-        font-size: 30px;
-        font-family: "华文行楷";
+        font-size: 25px;
+        font-family: "华文行楷","楷体";
+    }
+    .main .profile{
+        font-size: 16px;
+        color: #454242;
+        /* 设置字符间距 */
+        letter-spacing:3px;
     }
 /* /欢迎界面设计结束 */
 
@@ -103,14 +121,14 @@ footer{
             <p>博客名称: <span>轩墨博客</span>  </p>
             <p>联系方式: <span>657656910</span>  </p>
             <p>博客类型: <span>技术博客</span>  </p>
-            <p>博客简介:欢迎来到我的博客，
-                本人是个小小程序员，
-                之前一直是看大神博客学习，
-                此博客一是为了激励自己学习，
-                二是记录自己的学习历程，以方便及时回顾相关知识。
+            <p class="profile">博客简介:欢迎来到我的博客，本人是个小小程序员，之前一直是看大神博客学习，此博客一是为了激励自己学习，二是记录自己的学习历程，以方便及时回顾相关知识。
                 如您有任何问题请与我联系
+                
+                
+                
+                
             </p>
-           <p><a href="./html/index.html"><h1>点击此处进入我的博客</h1></a></p> 
+           <p><a href="./html/index.html"><h3>点击此处进入我的博客</h3></a></p> 
         </div>
 
     </div>

@@ -38,7 +38,6 @@ i{
    height: 180px;
    /* background-image: url("../images/banner.jpg"); */
    background-image: url("../images/banner1.jpg");
-
    background-repeat: no-repeat;
    background-size: 100% 100%;
    text-align: center;
@@ -68,8 +67,6 @@ nav{
   line-height: 36px;
   text-align: center;
   font-size: 12px;
-  /* background: #1fe2ef; */
-  /* background: #3bac8f; */
   background: #3bac8f;
   box-sizing: border-box;
   font-family: "宋体";
@@ -132,7 +129,7 @@ nav{
 /*隐藏盒子设置*/
 .hidden-box{
   width: 143px;
-  border: 1px solid #22648a;
+  /* border: 1px solid #da117f; */
   border-top: 0;
   position: absolute;
   display:none;
@@ -146,7 +143,7 @@ nav{
   cursor: pointer;
 }
 .hidden-box>ul li{
-  border-bottom: 1px solid #07bfc5;
+  border-bottom: 1px solid #ccc;
 }
 .hidden-box li:hover{
   background: #46c5a4;
@@ -231,21 +228,30 @@ left:566px;
   float: left;
 }
 .main-left .banner span{
-  width: 52px;
+  width: 30px;
   height: 52px;
+  line-height: 52px;
+  text-align: center;
   display: block;
-  background: url(../images/arr.png) no-repeat left top;
+  /* border: 2px solid #ccc; */
+  border-radius: 5px;
   position: absolute;
-  left: -21px;
-  top:50%;
+  left: 5px;
+  top:55%;
   margin-top: -26px;
   cursor: pointer;
   /*z-index: 99;*/
 }
+.main-left .banner .fa-chevron-left{
+  font-size: 30px;
+}
+.main-left .banner .fa-chevron-right{
+  font-size: 30px;
+}
 .main-left .banner .right{
   background-position: right top;
   left: auto;
-  right: -21px;
+  right: 6px;
 }
 .main-left .banner ol{
   width: 138px;
@@ -276,7 +282,7 @@ left:566px;
 
 .main-left .box{
   width: 740px;
-  background-color: #e7e9db;
+  background-color: #fff;
   padding: 10px 10px;
   margin-top: 20px;
 }
@@ -321,6 +327,9 @@ left:566px;
 /* js 鼠标悬浮 */
 .main-left .content h1:hover img{
     /* transform: scale(1.1); */
+}
+.main-left .content h1{
+  color: #615c5c;
 }
 .main-left .content h1:hover {
   color: #f40;
@@ -419,7 +428,7 @@ left:566px;
 }
 .main-right .content {
     width: 360px;
-    padding: 20px 20px;
+    padding: 40px 20px;
     /* border: 1px solid #000; */
     background-color: #fff;
     margin-top: 30px;
@@ -445,7 +454,9 @@ left:566px;
 .main-right .search .btn .motto{
   position: absolute;
   top: 115px;
-  left: 80px;
+  left: 20px;
+  margin-top: 20px;
+  letter-spacing:3px;
 }
 .main-right .search .btn .text {
     border: none;

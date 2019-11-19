@@ -19,6 +19,9 @@
     background-color: #fff;
     border-bottom: 1px solid #eee;
 }
+.wrap .content .article-header h1{
+	margin-left: 30px;
+}
 .main .wrap  .main-left .article-content{
     font-size: 15px;
     line-height: 26px;
